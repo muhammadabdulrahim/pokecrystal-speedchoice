@@ -8,7 +8,7 @@ This is a disassembly of Pokémon Crystal.
 >
 > ❌ To better balance the bingo board with the above change, require 2 gym badges to obtain the Bicycle.
 >
-> ❌ Enable the Goldenrod City GS Ball event, require the Hivebadge for it.
+> ✔️ Enable the Goldenrod City GS Ball event, require the Hivebadge for it.
 
 * Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `md5: 9f2922b235a5eeb78d65594e82ef5dde`
 * Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `md5: 301899b8087289a6436b0a241fbbb474`
