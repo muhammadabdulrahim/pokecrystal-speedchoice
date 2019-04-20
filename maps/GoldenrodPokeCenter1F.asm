@@ -16,9 +16,8 @@ NurseScript_0x60f91:
 	jumpstd pokecenternurse
 
 GoldenrodPokeCenter1F_GSBallTriggerLeft:
-	writebyte BATTLETOWERACTION_CHECKMOBILEEVENT
-	special BattleTowerAction
-	if_equal MOBILE_EVENT_OBJECT_GS_BALL, .gsball
+	checkevent EVENT_BEAT_BUGSY
+	iftrue .gsball
 	end
 
 .gsball:
@@ -48,9 +47,8 @@ GoldenrodPokeCenter1F_GSBallTriggerLeft:
 	end
 
 GoldenrodPokeCenter1F_GSBallTriggerRight:
-	writebyte BATTLETOWERACTION_CHECKMOBILEEVENT
-	special BattleTowerAction
-	if_equal MOBILE_EVENT_OBJECT_GS_BALL, .gsball
+	checkevent EVENT_BEAT_BUGSY
+	iftrue .gsball
 	end
 
 .gsball:
