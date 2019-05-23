@@ -1,25 +1,15 @@
 # Pokémon Crystal
 
-This is a disassembly of Pokémon Crystal.
+This is a disassembly of Pokémon Crystal. It makes modifications from the default [Speedchoice package](https://github.com/Dabomstew/pokecrystal-speedchoice) in order to accommodate in-house bingo rules of Team Bean. It branches from the 5.1b1 ROM. The rule changes are shown below. The emojis indicate which tasks are done and which are not.
 
-> ✔ Allow for easier time resets in the game menus.
+> ✔️ Allow for easier time resets in the game menus.
 >
-> ✔️ Move the Route 36 Sudowoodo one tile to the left in order to enable early Goldenrod City.
+> ✔️ Enable the GS Ball event, triggered from entering.
 >
-> ❌ To better balance the bingo board with the above change, require 2 gym badges to obtain the Bicycle.
+> ❌ Default sound settings to STEREO.
 >
-> ✔️ Enable the Goldenrod City GS Ball event, require the Hivebadge for it.
-
-* Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `md5: 9f2922b235a5eeb78d65594e82ef5dde`
-* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `md5: 301899b8087289a6436b0a241fbbb474`
+> ❌ Randomize the static Celebi encounter.
+>
+> ❌ Restore Clair event in Dragon's Den.
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md).
-
-
-## See also
-
-* Disassembly of [**Pokémon Red/Blue**][pokered]
-* irc: [**freenode#pret**][irc]
-
-[pokered]: https://github.com/iimarckus/pokered
-[irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
