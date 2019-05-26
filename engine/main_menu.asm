@@ -52,6 +52,7 @@ MainMenu: ; 49cdc
 	db "MYSTERY GIFT@"
 	db "MOBILE@"
 	db "MOBILE STUDIUM@"
+	db "SET CLOCK@"
 
 .Jumptable: ; 0x49d60
 	
@@ -61,6 +62,7 @@ MainMenu: ; 49cdc
 	dw MainMenu_MysteryGift
 	dw MainMenu_Mobile
 	dw MainMenu_MobileStudium
+	dw MainMenu_SetClock
 ; 0x49d6c
 
 CONTINUE       EQU 0
@@ -69,6 +71,7 @@ OPTION         EQU 2
 MYSTERY_GIFT   EQU 3
 MOBILE         EQU 4
 MOBILE_STUDIUM EQU 5
+SET_CLOCK      EQU 6
 
 MainMenuItems:
 
@@ -79,10 +82,11 @@ NewGameMenu: ; 0x49d6c
 	db -1
 
 ContinueMenu: ; 0x49d70
-	db 3
+	db 4
 	db CONTINUE
 	db NEW_GAME
 	db OPTION
+	db SET_CLOCK
 	db -1
 
 MobileMysteryMenu: ; 0x49d75
@@ -359,3 +363,13 @@ MainMenu_MysteryGift: ; 49ef5
 	callba MysteryGift
 	ret
 ; 49efc
+
+MainMenu_SetClock:
+	ld de, sStatsClockResetCount
+	callba SRAMStatsIncrement2Byte
+	ld a, BANK(sRTCStatusFlags)
+	call GetSRAMBank
+	ld a, $80
+	ld [sRTCStatusFlags], a
+	callba Continue
+	ret

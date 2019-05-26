@@ -32,12 +32,12 @@ text/common_text.o \
 gfx/pics.o
 
 
-roms := crystal-speedchoice.gbc
+roms := team-bean-baserom.gbc
 
 all: $(roms)
-crystal: crystal-speedchoice.gbc
+crystal: team-bean-baserom.gbc
 
-config: crystal-speedchoice.ini
+config: team-bean-baserom.ini
 
 clean:
 	rm -f $(roms) $(crystal_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
@@ -48,8 +48,8 @@ clean:
 %.o: %.asm $$(dep)
 	$(ASM) -o $@ $<
 
-crystal-speedchoice.gbc: $(crystal_obj)
-	$(LD) -n crystal-speedchoice.sym -m crystal-speedchoice.map -o $@ $^
+team-bean-baserom.gbc: $(crystal_obj)
+	$(LD) -n team-bean-baserom.sym -m team-bean-baserom.map -o $@ $^
 	$(FIX) -Cjv -i KAPB -k 01 -l 0x33 -m 0x10 -p 0 -n 4 -r 3 -t PM_CRYSTAL $@
 
 %.png: ;
