@@ -471,6 +471,7 @@ MapIlexForestSignpost4Script:
 	pause 20
 	clearflag ENGINE_HAVE_EXAMINED_GS_BALL
 	special Special_CelebiShrineEvent
+Randomizer_CelebiSpecies::
 	loadwildmon CELEBI, 30
 	startbattle
 	reloadmapafterbattle
